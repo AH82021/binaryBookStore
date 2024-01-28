@@ -6,7 +6,7 @@ import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Positive;
 
 public record Book(
-@NotBlank(message = "The book must have isbn")
+@NotBlank(message = "The book must have isbn ")
         @Pattern(
                 regexp = "^([0-9]{10}|[0-9]{13})$" ,
                 message ="The ISBN format must be valid"

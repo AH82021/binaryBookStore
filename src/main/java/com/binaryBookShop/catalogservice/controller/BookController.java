@@ -2,11 +2,12 @@ package com.binaryBookShop.catalogservice.controller;
 
 import com.binaryBookShop.catalogservice.domain.Book;
 import com.binaryBookShop.catalogservice.service.BookService;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("ap1/v1/books")
+@RequestMapping("api/v1/books")
 public class BookController {
   private final BookService bookService;
 
@@ -23,7 +24,7 @@ public class BookController {
     }
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Book addBook( @RequestBody Book book) {
+    public Book addBook(@Valid @RequestBody Book book) {
         return bookService.addBookToCatalog(book);
     }
     @DeleteMapping("{isbn}")
@@ -34,7 +35,7 @@ public class BookController {
 
     @PutMapping("{isbn}")
 
-    public Book updateBook(@PathVariable String isbn, @RequestBody Book book){
+    public Book updateBook(@PathVariable String isbn, @Valid @RequestBody Book book){
         return bookService.editBook(isbn,book);
     }
 
