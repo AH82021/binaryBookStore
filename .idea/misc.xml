@@ -3,11 +3,12 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/catalog-service" />
+    <file type="web" url="file://$PROJECT_DIR$/config-service" />
   </component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="fa42f4ab-b353-41f5-bdba-d8e2837defa9" />
   </component>
-  <component name="ProjectRootManager">
+  <component name="ProjectRootManager" version="2" project-jdk-name="openjdk-20" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="ProjectType">
